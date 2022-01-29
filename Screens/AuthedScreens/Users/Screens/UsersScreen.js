@@ -2,11 +2,11 @@ import React from 'react'
 import { View, Text,SafeAreaView ,StatusBar,Image,Alert,StyleSheet} from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Ripple from 'react-native-material-ripple'
-import ToggleSwitch from '../../../Components/ToggleSwitch';
+import ToggleSwitch from '../../../../Components/ToggleSwitch';
 
 import { useSelector ,useDispatch} from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {UIcolorsActionCreators} from '../../../Store/actions/UIcolorsActions'
+import {UIcolorsActionCreators} from '../../../../Store/Actions/UIColorsActionsCreators'
 
 export default function Users({navigation}) {
     const state = useSelector(state=>state);
@@ -39,7 +39,7 @@ export default function Users({navigation}) {
     return (
         <SafeAreaView style={{backgroundColor:state.UIcolorsReducer.backgroundColor,flex:1,paddingHorizontal:15,paddingTop:20}}>
             <View style={{alignSelf:'center',alignItems:'center'}}>
-                <Image source={require('../../../assets/avataaars.png')} style={{width:150,height:150,resizeMode:'cover',borderRadius:100}}/>
+                <Image source={require('../../../../assets/avataaars.png')} style={{width:150,height:150,resizeMode:'cover',borderRadius:100}}/>
                 <Text style={{color:state.UIcolorsReducer.ForegroundColor,fontSize:20,marginVertical:20}}>VIJAY ANAND</Text>
             </View>
             <View>

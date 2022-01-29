@@ -1,7 +1,7 @@
 import { View, Text ,StyleSheet,StatusBar} from 'react-native';
 import React from 'react';
 import Ripple from 'react-native-material-ripple';
-import ToggleSwitch from '../../../Components/ToggleSwitch';
+import ToggleSwitch from '../../../../Components/ToggleSwitch';
 
 import { useSelector ,useDispatch} from 'react-redux';
 import { bindActionCreators } from 'redux';
