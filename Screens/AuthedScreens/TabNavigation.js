@@ -3,7 +3,7 @@ import { HomeStack } from './Home/HomeStack';
 import { SearchStack } from './Search/SearchStack';
 import { UsersStack } from './Users/UsersStack';
 
-import LibraryScreen from './Library/LibraryScreen';
+import LibraryScreen from './LibraryScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const Tab = createBottomTabNavigator();

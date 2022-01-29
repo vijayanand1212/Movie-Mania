@@ -11,7 +11,7 @@ export default function MainNavigation() {
   return (
     <NavigationContainer>
         <TabNavigation/>
-        <StatusBar backgroundColor={state.UIcolorsReducer.backgroundColor} />
+        <StatusBar backgroundColor={state.UIColorsReducer.backgroundColor} />
     </NavigationContainer>
 
   );
