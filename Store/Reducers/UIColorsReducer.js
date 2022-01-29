@@ -7,7 +7,7 @@ const initialState ={
     LowBGColor2:'#e0e0e0',
 }
 
-export const UIcolorsReducer =(state = initialState,action) => {
+export const UIColorsReducer =(state = initialState,action) => {
     switch (action.type) {
         case "CHANGE_BG":
             return {

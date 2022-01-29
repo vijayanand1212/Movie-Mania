@@ -1,5 +1,5 @@
 import { createStore,combineReducers } from 'redux'
-import {UIcolorsReducer} from './reducers/UIcolorsReducer'
+import {UIColorsReducer} from './reducers/UIColorsReducer'
 
 export const store = createStore(combineReducers(
     {
