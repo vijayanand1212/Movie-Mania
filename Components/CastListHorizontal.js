@@ -13,7 +13,7 @@ export default function CastListHorizontal({CastList,Navigation}) {
         renderItem={({item})=>(
             <Ripple style={{marginRight:10,alignItems:'center'}} onPress={()=>Navigation.push("CastDetails")}>
                        <ImageBackground source={{uri:item['image']}} style={{ width:100,height:100,borderRadius:100 ,backgroundColor:"#1a1a1a",resizeMode:'cover',overflow:'hidden'}}   imageStyle={{resizeMode: "cover", height: 145}}></ImageBackground>
-            <Text style={{color:state.UIcolorsReducer.ForegroundColor,marginTop:5,textAlign:'center',maxWidth:100}} numberOfLines={2}>{item['name']}</Text>
+            <Text style={{color:state.UIColorsReducer.ForegroundColor,marginTop:5,textAlign:'center',maxWidth:100}} numberOfLines={2}>{item['name']}</Text>
         </Ripple>
         )}
         horizontal

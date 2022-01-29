@@ -1,5 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import Users from './Screens/UsersScreen'
+import UsersScreen from './Screens/UsersScreen'
 
 const UsersStackNav =createStackNavigator();
 export const UsersStack = ()=>{
