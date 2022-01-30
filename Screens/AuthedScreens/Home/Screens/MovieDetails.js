@@ -2,9 +2,10 @@ import { View, Text ,StyleSheet, Image, TextInput,ScrollView,ImageBackground, re
 import React,{useState,useEffect} from 'react';
 import { useSelector ,useDispatch} from 'react-redux';
 // Data
-import { MovieDetailsDummy } from '../../../../DummyData';
+import { ImagesSource, MovieDetailsDummy } from '../../../../DummyData';
 
 // Components
+import ImageListHorizontal from '../../../../Components/ImageListHorizontal'
 import { LinearGradient } from 'expo-linear-gradient';
 import SubHeader from '../../../../Components/SubHeader';
 import ContentText from '../../../../Components/ContentText';
@@ -55,6 +56,7 @@ export default function MovieDetails({navigation}) {
       textAlign:'right'
     }
   })
+
   return (
     <View style={styles.MainContainer}>
       <ImageBackground source={{uri:MovieDetailsDummy['image']}} style={styles.MovieImage}   imageStyle={{resizeMode: "cover", height: 370}}></ImageBackground>
@@ -87,17 +89,17 @@ export default function MovieDetails({navigation}) {
           {/* Directors */}
           <View>
             <SubHeader SubHeaderText="Directors"/>
-            <BackgroundTextList List={MovieDetailsDummy['directorList']} ForegroundColor={state.UIColorsReducer.ForegroundColor} BackgroundColor={state.UIColorsReducer.LowBGColor}/>
+            <BackgroundTextList List={MovieDetailsDummy['directorList']} ForegroundColor={state.UIColorsReducer.ForegroundColor} BackgroundColor={state.UIColorsReducer.LowBGColor} Navigation={navigation} NavigateTo="CastDetails"/>
           </View>
           {/* Stars List */}
           <View>
             <SubHeader SubHeaderText="Stars"/>
-            <BackgroundTextList List={MovieDetailsDummy['starList']} ForegroundColor={state.UIColorsReducer.ForegroundColor} BackgroundColor={state.UIColorsReducer.LowBGColor}/>
+            <BackgroundTextList List={MovieDetailsDummy['starList']} ForegroundColor={state.UIColorsReducer.ForegroundColor} BackgroundColor={state.UIColorsReducer.LowBGColor} Navigation={navigation} NavigateTo="CastDetails"/>
           </View>
           {/* Company */}
           <View>
             <SubHeader SubHeaderText="Companies"/>
-            <BackgroundTextList List={MovieDetailsDummy['companyList']} ForegroundColor={state.UIColorsReducer.ForegroundColor} BackgroundColor={state.UIColorsReducer.LowBGColor}/>
+            <BackgroundTextList List={MovieDetailsDummy['companyList']} ForegroundColor={state.UIColorsReducer.ForegroundColor} BackgroundColor={state.UIColorsReducer.LowBGColor} Navigation={navigation} NavigateTo="CastDetails"/>
           </View>
           {/* Cast */}
           <View>
@@ -111,7 +113,12 @@ export default function MovieDetails({navigation}) {
             <SubHeader SubHeaderText="Similars"/>
             <MovieListHorizontal MovieList={MovieDetailsDummy['similars']} ForegroundColor={state.UIColorsReducer.ForegroundColor} BackgroundColor={state.UIColorsReducer.LowBGColor}  Navigation={navigation}/>
           </View>
-
+          <View >
+                        <Ripple onPress={()=>navigation.push('ImageGallery')} >
+                            <SubHeader SubHeaderText="Image Gallery >" />
+                        </Ripple>
+                        <ImageListHorizontal List={ImagesSource['items']} Navigation={navigation}/>
+                    </View>
       </ScrollView>
       </View>
 
