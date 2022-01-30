@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import CastDetails from './Screens/CastDetails';
 import Home from './Screens/Home';
+import ImageGallery from './Screens/ImageGallery';
 import MovieDetails from './Screens/MovieDetails';
 import Reviews from './Screens/Reviews';
 
@@ -13,6 +14,7 @@ export const HomeStack = ()=>{
           <HomeStackNav.Screen name='MovieDetails' component={MovieDetails}/>
           <HomeStackNav.Screen name='CastDetails' component={CastDetails}/>
           <HomeStackNav.Screen name='Reviews' component={Reviews}/>
+          <HomeStackNav.Screen name='ImageGallery' component={ImageGallery}/>
         </HomeStackNav.Navigator>
     )
 }
